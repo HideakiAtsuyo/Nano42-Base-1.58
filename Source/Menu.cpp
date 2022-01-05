@@ -108,13 +108,13 @@ void main() {
 			Menu::MenuOption("Colors ~b~>", settingstheme);
 			if (Menu::Int("Scroll Delay", Menu::Settings::keyPressDelay2, 1, 200))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::keyPressDelay2 = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Int Delay", Menu::Settings::keyPressDelay3, 1, 200))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::keyPressDelay3 = NumberKeyboard();
 				}
 			}
@@ -187,25 +187,25 @@ void main() {
 			Menu::Title("Title Rect");
 			if (Menu::Int("Red", Menu::Settings::titleRect.r, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::titleRect.r = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Green", Menu::Settings::titleRect.g, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::titleRect.g = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Blue", Menu::Settings::titleRect.b, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::titleRect.b = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Opacity", Menu::Settings::titleRect.a, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::titleRect.a = NumberKeyboard();
 				}
 			}
@@ -216,25 +216,25 @@ void main() {
 			Menu::Title("Option Text");
 			if (Menu::Int("Red", Menu::Settings::optionText.r, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::optionText.r = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Green", Menu::Settings::optionText.g, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::optionText.g = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Blue", Menu::Settings::optionText.b, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::optionText.b = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Opacity", Menu::Settings::optionText.a, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::optionText.a = NumberKeyboard();
 				}
 			}
@@ -257,25 +257,25 @@ void main() {
 			Menu::Title("Scroller");
 			if (Menu::Int("Red", Menu::Settings::scroller.r, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::scroller.r = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Green", Menu::Settings::scroller.g, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::scroller.g = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Blue", Menu::Settings::scroller.b, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::scroller.b = NumberKeyboard();
 				}
 			}
 			if (Menu::Int("Opacity", Menu::Settings::scroller.a, 0, 255))
 			{
-				if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
+				if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept)) {
 					Menu::Settings::scroller.a = NumberKeyboard();
 				}
 			}

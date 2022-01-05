@@ -77,12 +77,12 @@ void reset_trainer_switch()
 
 void get_button_state(bool *a, bool *b, bool *up, bool *down, bool *l, bool *r)
 {
-	if (a) *a = KeyDown(VK_NUMPAD5);
-	if (b) *b = KeyJustUp(VK_NUMPAD0);
-	if (up) *up = KeyDown(VK_NUMPAD8);
-	if (down) *down = KeyDown(VK_NUMPAD2);
-	if (r) *r = KeyDown(VK_NUMPAD6);
-	if (l) *l = KeyDown(VK_NUMPAD4);
+	if (a) *a = KeyDown(Menu::Settings::selectKey);
+	if (b) *b = KeyJustUp(Menu::Settings::backKey);
+	if (up) *up = KeyDown(Menu::Settings::upKey);
+	if (down) *down = KeyDown(Menu::Settings::downKey);
+	if (r) *r = KeyDown(Menu::Settings::rightKey);
+	if (l) *l = KeyDown(Menu::Settings::leftKey);
 }
 
 void menu_beep(int snd)

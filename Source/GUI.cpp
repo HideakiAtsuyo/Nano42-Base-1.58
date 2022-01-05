@@ -479,46 +479,46 @@ void Menu::Checks::Controlls()
 	if (GetTickCount() - Settings::keyPressPreviousTick > Settings::keyPressDelay) {
 	if (GetTickCount() - Settings::keyPressPreviousTick2 > Settings::keyPressDelay2) {
 		if (GetTickCount() - Settings::keyPressPreviousTick3 > Settings::keyPressDelay3) {
-			if (IsKeyPressed(VK_MULTIPLY) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlScriptRB) && CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlPhoneRight) && Settings::controllerinput) {
+			if (IsKeyPressed(Menu::Settings::openKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlScriptRB) && CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlPhoneRight) && Settings::controllerinput) {
 				Settings::menuLevel == 0 ? MenuLevelHandler::MoveMenu(SubMenus::mainmenu) : Settings::menuLevel == 1 ? MenuLevelHandler::BackMenu() : NULL;
 				Settings::keyPressPreviousTick = GetTickCount();
 			}
-			else if (IsKeyPressed(VK_NUMPAD0) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendCancel) && Settings::controllerinput) {
+			else if (IsKeyPressed(Menu::Settings::backKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendCancel) && Settings::controllerinput) {
 				Settings::menuLevel > 0 ? MenuLevelHandler::BackMenu() : NULL;
 				if (Settings::menuLevel > 0)
 					PlaySoundFrontend_default("BACK");
 
 				Settings::keyPressPreviousTick = GetTickCount();
 			}
-			else if (IsKeyPressed(VK_NUMPAD8) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendUp) && Settings::controllerinput) {
+			else if (IsKeyPressed(Menu::Settings::upKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendUp) && Settings::controllerinput) {
 				Settings::currentOption > 1 ? Settings::currentOption-- : Settings::currentOption = Settings::optionCount;
 				if (Settings::menuLevel > 0)
 					PlaySoundFrontend_default("NAV_UP_DOWN");
 
 				Settings::keyPressPreviousTick2 = GetTickCount();
 			}
-			else if (IsKeyPressed(VK_NUMPAD2) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendDown) && Settings::controllerinput) {
+			else if (IsKeyPressed(Menu::Settings::downKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendDown) && Settings::controllerinput) {
 				Settings::currentOption < Settings::optionCount ? Settings::currentOption++ : Settings::currentOption = 1;
 				if (Settings::menuLevel > 0)
 					PlaySoundFrontend_default("NAV_UP_DOWN");
 
 				Settings::keyPressPreviousTick2 = GetTickCount();
 			}
-			else if (IsKeyPressed(VK_NUMPAD6) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlPhoneRight) && Settings::controllerinput) {
+			else if (IsKeyPressed(Menu::Settings::rightKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlPhoneRight) && Settings::controllerinput) {
 				Settings::leftPressed = true;
 				if (Settings::menuLevel > 0)
 					PlaySoundFrontend_default("NAV_UP_DOWN");
 
 				Settings::keyPressPreviousTick3 = GetTickCount();
 			}
-			else if (IsKeyPressed(VK_NUMPAD4) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlPhoneLeft) && Settings::controllerinput) {
+			else if (IsKeyPressed(Menu::Settings::leftKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlPhoneLeft) && Settings::controllerinput) {
 				Settings::rightPressed = true;
 				if (Settings::menuLevel > 0)
 					PlaySoundFrontend_default("NAV_UP_DOWN");
 
 				Settings::keyPressPreviousTick3 = GetTickCount();
 			}
-			else if (IsKeyPressed(VK_NUMPAD5) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept) && Settings::controllerinput) {
+			else if (IsKeyPressed(Menu::Settings::selectKey) || CONTROLS::IS_DISABLED_CONTROL_PRESSED(0, ControlFrontendAccept) && Settings::controllerinput) {
 				Settings::selectPressed = true;
 				if (Settings::menuLevel > 0)
 					PlaySoundFrontend_default("SELECT");
